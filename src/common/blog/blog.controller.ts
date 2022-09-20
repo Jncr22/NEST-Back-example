@@ -15,6 +15,11 @@ export class BlogController{
         return this.blogService.getBlog(params.id);
     }
 
+    @Get()
+    getBlos(@Param() params) {
+        return this.blogService.getBlogs(params.blogs);
+    }
+
     @Post()
     createBlog(@Body() blog:Blog){
         return this.blogService.createBlog(blog);
